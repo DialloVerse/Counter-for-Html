@@ -10,12 +10,28 @@
   <body>
     <div class="container">
       <div class="box">
-        <h1>0</h1>
+        <h1 id="counter">0</h1>
       </div>
       <div class="buttons">
         <button class="minus" onclick="minus()">Minus</button>
         <button class="plus" onclick="plus()">Plus</button>
       </div>
     </div>
+    <script type="text/javascript">
+      let count = 0;
+      let counter = document.getElementById("counter");
+      function minus() {
+        if (count == 0) {
+          count = 0;
+        } else {
+          count = count - 1;
+        }
+        counter.innerHTML = count;
+      }
+      function plus() {
+        count = count + 1;
+        counter.innerHTML = count;
+      }
+    </script>
   </body>
 </html>
